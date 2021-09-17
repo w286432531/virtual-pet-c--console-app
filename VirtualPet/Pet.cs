@@ -24,6 +24,7 @@ namespace VirtualPet
         public void GetHunger()
         {
             Console.WriteLine(this.Hunger);
+        }
 
         public void Tick()
         {
