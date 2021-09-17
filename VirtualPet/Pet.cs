@@ -9,11 +9,28 @@ namespace VirtualPet
         public int Health;
         public int Boredom;
         public int Hunger;
+    
+
+        public void GetHealth()
+        {
+            Console.WriteLine(this.Health);
+        }
+
+        public void GetBoredom()
+        {
+            Console.WriteLine(this.Boredom);
+        }
+
+        public void GetHunger()
+        {
+            Console.WriteLine(this.Hunger);
+
         public void Tick()
         {
             this.Health -= 5;
             this.Boredom += 5;
             this.Hunger += 5;
+   
         }
 
         public string Name;
