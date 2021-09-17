@@ -1,22 +1,22 @@
 ﻿using System;
+using System.Threading;
 
 namespace VirtualPet
 {
     class Program
     {
+        public static Pet testPet = new Pet();
         static void Main(string[] args)
         {
-            Pet testPet = new Pet();
-            testPet.Health = 30;
-            testPet.Boredom = 50;
-            testPet.Hunger = 50;
-
-            testPet.GetHealth();
-            testPet.GetBoredom();
-            testPet.GetHunger();
             
+            Timer _timer = new Timer(Tick, null, 0, 15000);
+            Console.WriteLine("Hello! Welcome to Virtual Pets");
 
-            
         }
+        public static void Tick(object o) 
+        {
+            testPet.Tick();
+        }
+
     }
 }
