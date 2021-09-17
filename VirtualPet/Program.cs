@@ -6,7 +6,17 @@ namespace VirtualPet
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello! Welcome to Virtual Pets");
+            Pet testPet = new Pet();
+            testPet.Health = 30;
+            testPet.Boredom = 50;
+            testPet.Hunger = 50;
+
+            testPet.GetHealth();
+            testPet.GetBoredom();
+            testPet.GetHunger();
+            
+
+            
         }
     }
 }
