@@ -9,7 +9,7 @@ namespace VirtualPet
         public int Health;
         public int Boredom;
         public int Hunger;
-        public void Tick(Object o)
+        public void Tick()
         {
             this.Health -= 5;
             this.Boredom += 5;

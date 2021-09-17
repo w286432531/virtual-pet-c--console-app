@@ -5,11 +5,16 @@ namespace VirtualPet
 {
     class Program
     {
+        public static Pet testPet = new Pet();
         static void Main(string[] args)
         {
-            Pet testPet = new Pet();
-            Timer _timer = new Timer(testPet.Tick, null, 0, 15000);
+            Timer _timer = new Timer(Tick, null, 0, 15000);
             Console.WriteLine("Hello! Welcome to Virtual Pets");
         }
+        public static void Tick(object o) 
+        {
+            testPet.Tick();
+        }
+
     }
 }
