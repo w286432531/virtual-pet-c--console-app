@@ -6,6 +6,14 @@ namespace VirtualPet
 {
     public class Pet
     {
-
+        public int Health;
+        public int Boredom;
+        public int Hunger;
+        public void Tick(Object o)
+        {
+            this.Health -= 5;
+            this.Boredom += 5;
+            this.Hunger += 5;
+        }
     }
 }
