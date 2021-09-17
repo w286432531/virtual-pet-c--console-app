@@ -48,10 +48,13 @@ namespace VirtualPet
             this.Hunger -= 40;
         }
 
-         //take pet to vet. use petname.vet() in program.cs to call function
+         
+        
+        
+        //take pet to vet. use petname.vet() in program.cs to call function
         public void vet()
         {
-            //vet increase health by 30
+            //vet increase health by 40
             this.Health += 40;
         }
     }
