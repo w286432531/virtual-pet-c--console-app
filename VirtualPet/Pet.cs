@@ -43,12 +43,24 @@ namespace VirtualPet
             this.Name = Console.ReadLine();
 		}
 
+        public string GetName()
+        {
+            return this.Name;
+        }
+
         public void SetSpecies()
         {
             Console.WriteLine("Enter your pet's species:");
             this.Species = Console.ReadLine();
 
         }
+
+        public string GetSpecies()
+		{
+            return this.Species;
+		}
+
+
       // adding ability to play with pet. use petname.play() in program.cs to call function
       public void play()
         {
