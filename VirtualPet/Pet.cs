@@ -6,12 +6,20 @@ namespace VirtualPet
 {
     public class Pet
     {
-        public int Health;
-        public int Boredom;
-        public int Hunger;
-    
+        public int Health = 100;
+        public int Boredom = 0;
+        public int Hunger = 0;
+        public string Name;
+        public string Species;
 
-        public void GetHealth()
+		public Pet(string name, string species)
+		{
+			this.Name = name;
+			this.Species = species;
+		}
+
+
+		public void GetHealth()
         {
             Console.WriteLine(this.Health);
         }
@@ -33,9 +41,6 @@ namespace VirtualPet
             this.Hunger += 5;
    
         }
-
-        public string Name;
-        public string Species;
       
         public void SetName()
 		{
