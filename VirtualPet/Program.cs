@@ -14,7 +14,7 @@ namespace VirtualPet
 
 
             // Kevin and Jay 9/20----------
-            // testing the shelter list view pets
+            // testing the shelter list view pets and interact function
             //Shelter myShelter = new Shelter();
             //Pet myPet1 = new Pet("spot", "dog");
             //Pet myPet2 = new Pet("muffy", "dog");
@@ -23,6 +23,7 @@ namespace VirtualPet
             //myShelter.PetList.Add(myPet1);
             //myShelter.PetList.Add(myPet2);
             //myShelter.PetList.Add(myPet3);
+            //myShelter.Interact();
             //myShelter.GetStatusAll();
             //-----------------------------
         }

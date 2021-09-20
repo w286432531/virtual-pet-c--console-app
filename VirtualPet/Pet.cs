@@ -74,7 +74,7 @@ namespace VirtualPet
 
 
       // adding ability to play with pet. use petname.play() in program.cs to call function
-      public void play()
+      public void Play()
         {
             //play increase hunger by 10
             this.Hunger += 10;
@@ -84,7 +84,7 @@ namespace VirtualPet
             this.Health += 10;
         }
         // adding ability to feed the pet. use petname.play() in program.cs to call funcion
-        public void feed()
+        public void Feed()
         {
             //feed decrease hunger by 40
             this.Hunger -= 40;
