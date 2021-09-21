@@ -11,7 +11,13 @@ namespace VirtualPet
             CatPicture.PrintCatPicture();
             Timer _timer = new Timer(Tick, null, 0, 15000);
             Console.WriteLine("Hello! Welcome to Virtual Pets");
-
+            
+            //Testing to see if sounds work. You may delete this
+            Pet mypet = new Pet("Fido","Dog");
+            mypet.Play();
+            Console.WriteLine("Paused. Press enter to continue.");
+            Console.ReadLine();
+            
 
             // Kevin and Jay 9/20----------
             // testing the shelter list view pets and interact function

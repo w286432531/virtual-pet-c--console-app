@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Media;
+//need to install nuget package System.Windows.Extensions
 
 namespace VirtualPet
 {
@@ -11,6 +13,9 @@ namespace VirtualPet
 		//tbd
 		//public List <Pet> PetList { get; set; }
 		public List<Pet> PetList = new List<Pet>();
+
+		SoundPlayer DoorOpen = new SoundPlayer(@"..\..\..\..\Sounds\door_open.wav");
+		SoundPlayer DoorClose = new SoundPlayer(@"..\..\..\..\Sounds\door_close.wav");
 
 
 		public Shelter()
@@ -52,6 +57,7 @@ namespace VirtualPet
                 Console.WriteLine(i+1 + "." + PetList[i].Name);
             }
 			int index = Convert.ToInt32(Console.ReadLine())-1;
+			DoorOpen.Play();
 			return PetList[index];
 		}
 
