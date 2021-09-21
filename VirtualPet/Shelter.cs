@@ -14,6 +14,8 @@ namespace VirtualPet
 		//public List <Pet> PetList { get; set; }
 		public List<Pet> ShelterList = new List<Pet>();
 
+
+	
 		SoundPlayer DoorOpen = new SoundPlayer(@"..\..\..\..\Sounds\door_open.wav");
 		SoundPlayer DoorClose = new SoundPlayer(@"..\..\..\..\Sounds\door_close.wav");
 
