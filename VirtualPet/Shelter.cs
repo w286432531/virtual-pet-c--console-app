@@ -59,7 +59,8 @@ namespace VirtualPet
                 Console.WriteLine(i+1 + "." + ShelterList[i].Name);
             }
 			int index = Convert.ToInt32(Console.ReadLine())-1;
-			DoorOpen.Play();
+			//Need to find compatible sound.
+			//DoorOpen.Play();
 			return ShelterList[index];
 		}
 
@@ -128,9 +129,9 @@ namespace VirtualPet
 			 ShelterList.Add(homelessPet);
             }
 
-		    public void RemovefromShelter(Pet homelessPet)
+		    public void RemovefromShelter()
 		    {
-			ShelterList.Remove(homelessPet);
+			ShelterList.Remove(ChoosePet());
 		    }
 
 		//public void  AdoptPet(Pet homelessPet)

@@ -5,23 +5,18 @@ namespace VirtualPet
 {
     class Program
     {
-        public static Pet testPet = new Pet("test", "test");
+        static Shelter myShelter = new Shelter();
         static void Main(string[] args)
         {
             CatPicture.PrintCatPicture();
             Timer _timer = new Timer(Tick, null, 0, 15000);
-            // Kevin and Jay 9/20----------
-            // testing the shelter list view pets and interact function
-            Shelter myShelter = new Shelter();
+
+            
             Pet myPet1 = new Pet("spot", "dog");
             Pet myPet2 = new Pet("muffy", "dog");
             Pet myPet3 = new Pet("charlie", "dog");
-            Console.ReadLine();
-            myShelter.PetList.Add(myPet1);
-            myShelter.PetList.Add(myPet2);
-            myShelter.PetList.Add(myPet3);
-            myShelter.Interact();
-            myShelter.GetStatusAll();
+            myShelter.ShelterList.Add(myPet1);
+            myShelter.ShelterList.Add(myPet2);
 
 
             bool playing = true;
@@ -33,15 +28,11 @@ namespace VirtualPet
 
 
                 Console.WriteLine("Make a Selection");
-                Console.WriteLine("1. Check Status of your pet");
-                Console.WriteLine("2. Feed your pet");
-                Console.WriteLine("3. Play with your pet");
-                Console.WriteLine("4. Take your pet to the doctor");
-                Console.WriteLine("5. View pets in the shelter");
-                Console.WriteLine("6. Make your own pet");
-                Console.WriteLine("7. View Status of all pets");
-                Console.WriteLine("8. Name Your Pet");
-                Console.WriteLine("9. Change your Pet's species");
+                Console.WriteLine("1. Add new pet to the shelter.");
+                Console.WriteLine("2. Interact with a pet or all pets.");
+                Console.WriteLine("3. View Status of all pets");
+                Console.WriteLine("4. Adopt a pet.");
+                
                 Console.WriteLine("enter Q to quit");
 
 
@@ -52,44 +43,27 @@ namespace VirtualPet
 
                 {
                     case "1":
-
-                        // insert check status of pet here (If there is no pet, print "go to the shelter and get a pet")
-
+                        // insert making your own pet here
+                        CreatePet();
                         break;
 
                     case "2":
 
                         // insert feed pet here
-
+                        myShelter.Interact();
                         break;
 
                     case "3":
-
-                        // insert play with pet here
+                        // insert checking status of ALL pets
+                        myShelter.GetStatusAll();
+                        break;
 
                         break;
 
                     case "4":
 
-                        // insert take pet to the doctor here
-
-                        break;
-
-                    case "5":
-
-                        // insert go to the shelter here
-
-                        break;
-
-                    case "6":
-
-                        // insert making your own pet here
-
-                        break;
-
-                    case "7":
-                        // insert checking status of ALL pets
-
+                        // Remove the pet in the shelter
+                        myShelter.RemovefromShelter();
                         break;
 
                     case "q":
@@ -106,6 +80,15 @@ namespace VirtualPet
         {
             //testPet.Tick();
         }
+        public static void CreatePet()
+        {
+            Console.WriteLine("Enter a name for this pet:");
+            string petName = Console.ReadLine();
+            Console.WriteLine("Enter the pet's species:");
+            string petSpecies = Console.ReadLine();
 
+            Pet newPet = new Pet(petName, petSpecies);
+            myShelter.addtoShelter(newPet);
+        }
     }
 }
