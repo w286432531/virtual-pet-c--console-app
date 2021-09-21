@@ -12,7 +12,7 @@ namespace VirtualPet
 	{
 		//tbd
 		//public List <Pet> PetList { get; set; }
-		public List<Pet> PetList = new List<Pet>();
+		public List<Pet> ShelterList = new List<Pet>();
 
 		SoundPlayer DoorOpen = new SoundPlayer(@"..\..\..\..\Sounds\door_open.wav");
 		SoundPlayer DoorClose = new SoundPlayer(@"..\..\..\..\Sounds\door_close.wav");
@@ -29,7 +29,7 @@ namespace VirtualPet
 			Console.Clear();
 			Console.WriteLine("Name\t\tHunger\t\tBoredom\t\tHealth");
 			Console.WriteLine(divider);
-			foreach (var pet in PetList)
+			foreach (var pet in ShelterList)
 			{
 				Console.WriteLine(pet.Name + "\t\t" + pet.Hunger + "\t\t" + pet.Boredom + "\t\t" + pet.Health);
 			}
@@ -52,13 +52,13 @@ namespace VirtualPet
 		
 		public Pet ChoosePet()
         {
-			for (int i = 0; i < PetList.Count; i++)
+			for (int i = 0; i < ShelterList.Count; i++)
             {
-                Console.WriteLine(i+1 + "." + PetList[i].Name);
+                Console.WriteLine(i+1 + "." + ShelterList[i].Name);
             }
 			int index = Convert.ToInt32(Console.ReadLine())-1;
 			DoorOpen.Play();
-			return PetList[index];
+			return ShelterList[index];
 		}
 
 		public void InteractWithOnePet(Pet chosenPet)
@@ -87,7 +87,7 @@ namespace VirtualPet
         }
 
 		public void InteractWithAllPets()
-        {
+		{
 			Console.WriteLine("1. Play");
 			Console.WriteLine("2. Feed");
 			Console.WriteLine("3. See vet");
@@ -95,21 +95,21 @@ namespace VirtualPet
 			switch (index)
 			{
 				case 1:
-                    foreach (var pet in PetList)
-                    {
-						pet.Play();                       
+					foreach (var pet in ShelterList)
+					{
+						pet.Play();
 					}
 					Console.WriteLine("Playing with all pets.");
 					break;
 				case 2:
-					foreach (var pet in PetList)
-                    {
+					foreach (var pet in ShelterList)
+					{
 						pet.Feed();
 					}
 					Console.WriteLine("Feeding all the pets.");
 					break;
 				case 3:
-					foreach (var pet in PetList)
+					foreach (var pet in ShelterList)
 					{
 						pet.SeeDoctor();
 					}
@@ -117,7 +117,25 @@ namespace VirtualPet
 					break;
 				default:
 					break;
+
 			}
 		}
+		
+			public void addtoShelter(Pet homelessPet)
+            {
+			 ShelterList.Add(homelessPet);
+            }
+
+		    public void RemovefromShelter(Pet homelessPet)
+		    {
+			ShelterList.Remove(homelessPet);
+		    }
+
+		//public void  AdoptPet(Pet homelessPet)
+		//{
+			//RemovefromShelter(homelessPet);
+		//}
+
+
 	}
 }
