@@ -1,4 +1,6 @@
 using System;
+using System.Media;
+//need to install nuget package System.Windows.Extensions
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,10 +14,19 @@ namespace VirtualPet
         public string Name;
         public string Species;
 
-		public Pet(string name, string species)
+        SoundPlayer CanOpen = new SoundPlayer(@"..\..\..\..\Sounds\can_open.wav");
+        SoundPlayer Squeak = new SoundPlayer(@"..\..\..\..\Sounds\squeak.wav");
+        SoundPlayer Beep = new SoundPlayer(@"..\..\..\..\Sounds\beep.wav");
+        SoundPlayer Bark = new SoundPlayer(@"..\..\..\..\Sounds\bark.wav");
+
+        public Pet()
+        {
+        }
+        public Pet(string name, string species)
 		{
 			this.Name = name;
 			this.Species = species;
+            Bark.Play();
 		}
 
 
@@ -82,18 +93,21 @@ namespace VirtualPet
             this.Boredom -= 20;
             //play increase health by 10
             this.Health += 10;
+            Squeak.Play();
         }
         // adding ability to feed the pet. use petname.play() in program.cs to call funcion
         public void Feed()
         {
             //feed decrease hunger by 40
             this.Hunger -= 40;
+            CanOpen.Play();
         }
         //take pet to doctor. use petname.SeeDoctor() in program.cs to call function
         public void SeeDoctor()
         {
             //vet increase health by 40
             this.Health += 40;
+            Beep.Play();
         }
     }
 }
