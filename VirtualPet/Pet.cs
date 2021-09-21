@@ -17,7 +17,6 @@ namespace VirtualPet
         SoundPlayer CanOpen = new SoundPlayer(@"..\..\..\..\Sounds\can_open.wav");
         SoundPlayer Squeak = new SoundPlayer(@"..\..\..\..\Sounds\squeak.wav");
         SoundPlayer Beep = new SoundPlayer(@"..\..\..\..\Sounds\beep.wav");
-        SoundPlayer Bark = new SoundPlayer(@"..\..\..\..\Sounds\bark.wav");
 
         public Pet()
         {
@@ -26,7 +25,7 @@ namespace VirtualPet
 		{
 			this.Name = name;
 			this.Species = species;
-            Bark.Play();
+           
 		}
 
 
