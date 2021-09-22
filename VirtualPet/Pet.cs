@@ -13,8 +13,9 @@ namespace VirtualPet
         public int Hunger = 0;
         public string Name;
         public string Species;
+        public bool isRobot = false;
 
-        SoundPlayer CanOpen = new SoundPlayer(@"..\..\..\..\Sounds\can_open.wav");
+		SoundPlayer CanOpen = new SoundPlayer(@"..\..\..\..\Sounds\can_open.wav");
         SoundPlayer Squeak = new SoundPlayer(@"..\..\..\..\Sounds\squeak.wav");
         SoundPlayer Beep = new SoundPlayer(@"..\..\..\..\Sounds\beep.wav");
 
@@ -75,7 +76,7 @@ namespace VirtualPet
             return this.Species;
 		}
 
-        public void GetStatus()
+        public virtual void GetStatus()
 		{
 			Console.WriteLine("Hunger: " + this.Hunger);
 			Console.WriteLine("Boredom: " + this.Boredom);
