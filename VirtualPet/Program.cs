@@ -31,7 +31,6 @@ namespace VirtualPet
             {
                 Console.WriteLine("Hello! Welcome to Virtual Pets");
 
-
                 Console.WriteLine("Make a Selection");
                 Console.WriteLine("1. Check Status of your pet");
                 Console.WriteLine("2. Feed your pet");
@@ -44,8 +43,6 @@ namespace VirtualPet
                 Console.WriteLine("9. Change your Pet's species");
                 Console.WriteLine("enter Q to quit");
 
-
-
                 string menuinput = Console.ReadLine().ToLower();
 
                 switch (menuinput)
@@ -54,7 +51,7 @@ namespace VirtualPet
                     case "1":
 
                         // insert check status of pet here (If there is no pet, print "go to the shelter and get a pet")
-
+                        
                         break;
 
                     case "2":
@@ -99,6 +96,7 @@ namespace VirtualPet
 
 
                 }
+                Tick();
 
             }
         }
