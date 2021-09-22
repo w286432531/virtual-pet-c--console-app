@@ -41,7 +41,8 @@ namespace VirtualPet
 			int index = Convert.ToInt32(Console.ReadLine());
 			if (index == 1)
             {
-				InteractWithOnePet(ChoosePet());
+				Pet chosenPet = ChoosePet();
+				InteractWithOnePet(chosenPet);
             }
 			else if (index == 2)
             {
@@ -66,27 +67,54 @@ namespace VirtualPet
 
 		public void InteractWithOnePet(Pet chosenPet)
         {
-            Console.WriteLine("1. Play");
-            Console.WriteLine("2. Feed");
-            Console.WriteLine("3. See vet");
-			int index = Convert.ToInt32(Console.ReadLine());
-            switch (index)
-            {
-				case 1:
-					chosenPet.Play();
-                    Console.WriteLine("Playing with the pet.");
-					break;
-				case 2:
-					chosenPet.Feed();
-                    Console.WriteLine("Feeding the pet.");
-					break;
-				case 3:
-					chosenPet.SeeDoctor();
-                    Console.WriteLine("Taking pet to the doctor.");
-					break;
-				default:
-                    break;
-            }
+			if (chosenPet.isRobot == false) 
+			{ 
+			
+				Console.WriteLine("1. Play");
+				Console.WriteLine("2. Feed");
+				Console.WriteLine("3. See vet");
+				int index = Convert.ToInt32(Console.ReadLine());
+				switch (index)
+				{
+					case 1:
+						chosenPet.Play();
+						Console.WriteLine("Playing with the pet.");
+						break;
+					case 2:
+						chosenPet.Feed();
+						Console.WriteLine("Feeding the pet.");
+						break;
+					case 3:
+						chosenPet.SeeDoctor();
+						Console.WriteLine("Taking pet to the doctor.");
+						break;
+					default:
+						break;
+				}
+			}else
+			{
+				Console.WriteLine("1. Charge the pet");
+				Console.WriteLine("2. Take pet for maintenance");
+				Console.WriteLine("3. Play with the pet");				
+				int index = Convert.ToInt32(Console.ReadLine());
+				switch (index)
+                {
+					case 1:
+						chosenPet.Feed();
+						Console.WriteLine("Charge the pet.");
+						break;
+					case 2:
+						chosenPet.SeeDoctor();
+						Console.WriteLine("Take pet for maintenance.");
+						break;
+					case 3:
+						chosenPet.Play();
+						Console.WriteLine("Playing with robotic pet.");
+						break;
+					default:
+						break;
+				}
+			}
         }
 
 		public void InteractWithAllPets()

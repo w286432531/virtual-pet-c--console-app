@@ -63,12 +63,10 @@ namespace VirtualPet
                         myShelter.GetStatusAll();
                         break;
 
-                        break;
-
                     case "4":
 
                         // Remove the pet in the shelter
-                        myShelter.RemovefromShelter();
+                        myShelter.RemovefromShelter(myShelter.ChoosePet());
                         break;
 
                     case "q":
@@ -78,7 +76,7 @@ namespace VirtualPet
 
 
                 }
-                Tick();
+                //Tick();
 
             }
         }
