@@ -48,7 +48,7 @@ namespace VirtualPet
             {
 				InteractWithAllPets();
             }
-			DoorOpen.Play();
+			//DoorOpen.Play();
 		}
 		
 		public Pet ChoosePet()
