@@ -36,8 +36,9 @@ namespace VirtualPet
 
             while (playing)
             {
+                Console.WriteLine();
                 Console.WriteLine("Hello! Welcome to Virtual Pets");
-
+                Console.WriteLine();
                 Console.WriteLine("Make a Selection");
                 Console.WriteLine("1. Add new pet to the shelter.");
                 Console.WriteLine("2. Interact with a pet or all pets.");
@@ -48,10 +49,11 @@ namespace VirtualPet
                 Console.WriteLine("enter Q to quit");
 
                 string menuinput = Console.ReadLine().ToLower();
-
+                Console.Clear();
                 switch (menuinput)
 
                 {
+                    
                     case "1":
 
                         // insert check status of pet here (If there is no pet, print "go to the shelter and get a pet")
@@ -84,7 +86,7 @@ namespace VirtualPet
 
                 }
                 //Tick();
-
+                
             }
         }
         public static void Tick(object o) 
@@ -93,6 +95,7 @@ namespace VirtualPet
         }
         public static void CreatePet()
         {
+            
             Console.WriteLine("Enter a name for this pet:");
             string petName = Console.ReadLine();
             Console.WriteLine("Enter the pet's species (enter robot to create a robopet):");
@@ -110,9 +113,8 @@ namespace VirtualPet
                 myShelter.addtoShelter(newPet);
 				Console.WriteLine("Congratulations on your new pet!");
             }
-
-			
-            
+            Thread.Sleep(1000);
+            Console.Clear();
         }
     }
 }
