@@ -37,6 +37,7 @@ namespace VirtualPet
                 Console.WriteLine("3. View Status of all pets");
                 Console.WriteLine("4. Adopt a pet.");
                 
+                
                 Console.WriteLine("enter Q to quit");
 
                 string menuinput = Console.ReadLine().ToLower();
