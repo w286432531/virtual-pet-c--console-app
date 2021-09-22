@@ -80,6 +80,7 @@ namespace VirtualPet
 			Console.WriteLine("Health: " + this.Health);
 		}
 
+        
 
       // adding ability to play with pet. use petname.play() in program.cs to call function
       public void Play()
