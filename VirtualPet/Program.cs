@@ -75,7 +75,7 @@ namespace VirtualPet
                     case "4":
 
                         // Remove the pet in the shelter
-                        myShelter.RemovefromShelter(myShelter.ChoosePet());
+                        myShelter.RemovefromShelter();
                         break;
 
                     case "q":
