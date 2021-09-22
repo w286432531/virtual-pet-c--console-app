@@ -14,9 +14,9 @@ namespace VirtualPet
         public string Name;
         public string Species;
 
-        SoundPlayer CanOpen = new SoundPlayer(@"..\..\..\..\Sounds\can_open.wav");
-        SoundPlayer Squeak = new SoundPlayer(@"..\..\..\..\Sounds\squeak.wav");
-        SoundPlayer Beep = new SoundPlayer(@"..\..\..\..\Sounds\beep.wav");
+        private SoundPlayer CanOpen = new SoundPlayer(@"..\..\..\..\Sounds\can_open.wav");
+        private SoundPlayer Squeak = new SoundPlayer(@"..\..\..\..\Sounds\squeak.wav");
+        private SoundPlayer Beep = new SoundPlayer(@"..\..\..\..\Sounds\beep.wav");
 
         public Pet()
         {
@@ -29,19 +29,19 @@ namespace VirtualPet
 		}
 
 
-		public void GetHealth()
+		public int GetHealth()
         {
-            Console.WriteLine(this.Health);
+            return this.Health;
         }
 
-        public void GetBoredom()
+        public int GetBoredom()
         {
-            Console.WriteLine(this.Boredom);
+            return this.Boredom;
         }
 
-        public void GetHunger()
+        public int GetHunger()
         {
-            Console.WriteLine(this.Hunger);
+            return this.Hunger;
         }
 
         public void Tick()
@@ -52,10 +52,9 @@ namespace VirtualPet
    
         }
       
-        public void SetName()
+        public void SetName(String name)
 		{
-			Console.WriteLine("Enter your pet's name:");
-            this.Name = Console.ReadLine();
+            this.Name = name;
 		}
 
         public string GetName()
@@ -63,10 +62,9 @@ namespace VirtualPet
             return this.Name;
         }
 
-        public void SetSpecies()
+        public void SetSpecies(String species)
         {
-            Console.WriteLine("Enter your pet's species:");
-            this.Species = Console.ReadLine();
+            this.Species = species;
 
         }
 
@@ -99,6 +97,7 @@ namespace VirtualPet
         {
             //feed decrease hunger by 40
             this.Hunger -= 40;
+            this.Boredom += 10;
             CanOpen.Play();
         }
         //take pet to doctor. use petname.SeeDoctor() in program.cs to call function
@@ -106,6 +105,7 @@ namespace VirtualPet
         {
             //vet increase health by 40
             this.Health += 40;
+            this.Boredom -= 20;
             Beep.Play();
         }
     }
