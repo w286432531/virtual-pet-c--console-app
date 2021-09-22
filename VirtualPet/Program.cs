@@ -13,7 +13,7 @@ namespace VirtualPet
             // Kevin and Jay 9/20----------
             // testing the shelter list view pets and interact function
             Shelter myShelter = new Shelter();
-            Pet myPet1 = new Pet("spot", "dog");
+            Pet myPet1 = new Pet(" ");
             Pet myPet2 = new Pet("muffy", "dog");
             Pet myPet3 = new Pet("charlie", "dog");
             Console.ReadLine();
