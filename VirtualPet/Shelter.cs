@@ -48,7 +48,7 @@ namespace VirtualPet
             {
 				InteractWithAllPets();
             }
-			DoorOpen.Play();
+			//DoorOpen.Play();
 		}
 		
 		public Pet ChoosePet()
@@ -159,10 +159,10 @@ namespace VirtualPet
         }
 
 
-		public void RemovefromShelter()
+		public void RemovefromShelter(Pet homelessPet)
 		{
 			Console.WriteLine("Which pet would you like to adopt?");
-			ShelterList.Remove(ChoosePet());
+			ShelterList.Remove(homelessPet);
 		}
 
 
