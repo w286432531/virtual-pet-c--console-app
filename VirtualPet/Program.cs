@@ -18,6 +18,11 @@ namespace VirtualPet
             myShelter.ShelterList.Add(myPet1);
             myShelter.ShelterList.Add(myPet2);
 
+            RoboPet Tobor = new RoboPet();
+            Tobor.GetStatus();
+            Tobor.Name = "Tobor";
+            myShelter.ShelterList.Add(Tobor);
+
 
             bool playing = true;
 
