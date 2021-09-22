@@ -29,19 +29,19 @@ namespace VirtualPet
 		}
 
 
-		public void GetHealth()
+		public int GetHealth()
         {
-            Console.WriteLine(this.Health);
+            return this.Health;
         }
 
-        public void GetBoredom()
+        public int GetBoredom()
         {
-            Console.WriteLine(this.Boredom);
+            return this.Boredom;
         }
 
-        public void GetHunger()
+        public int GetHunger()
         {
-            Console.WriteLine(this.Hunger);
+            return this.Hunger;
         }
 
         public void Tick()
