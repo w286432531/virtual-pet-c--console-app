@@ -25,7 +25,7 @@ namespace VirtualPet
             myShelter.ShelterList.Add(myPet1);
             myShelter.ShelterList.Add(myPet2);
 
-            RoboPet Tobor = new RoboPet();
+            RoboPet Tobor = new RoboPet("Tobor", "robot");
             Tobor.GetStatus();
             Tobor.Name = "Tobor";
             myShelter.ShelterList.Add(Tobor);
@@ -70,8 +70,6 @@ namespace VirtualPet
                         myShelter.GetStatusAll();
                         break;
 
-                        break;
-
                     case "4":
 
                         // Remove the pet in the shelter
@@ -85,7 +83,7 @@ namespace VirtualPet
 
 
                 }
-                Tick();
+                //Tick();
 
             }
         }
@@ -97,11 +95,24 @@ namespace VirtualPet
         {
             Console.WriteLine("Enter a name for this pet:");
             string petName = Console.ReadLine();
-            Console.WriteLine("Enter the pet's species:");
+            Console.WriteLine("Enter the pet's species (enter robot to create a robopet):");
             string petSpecies = Console.ReadLine();
 
-            Pet newPet = new Pet(petName, petSpecies);
-            myShelter.addtoShelter(newPet);
+            if (petSpecies.ToLower() == "robot")
+            {
+				Console.WriteLine("Creating a Robot...");
+                RoboPet newPet = new RoboPet(petName, petSpecies);
+                myShelter.addtoShelter(newPet);
+            } else
+			{
+				Console.WriteLine("Adding your pet...");
+                Pet newPet = new Pet(petName, petSpecies);
+                myShelter.addtoShelter(newPet);
+				Console.WriteLine("Congratulations on your new pet!");
+            }
+
+			
+            
         }
     }
 }

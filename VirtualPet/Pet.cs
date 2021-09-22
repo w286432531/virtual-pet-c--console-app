@@ -13,11 +13,11 @@ namespace VirtualPet
         public int Hunger = 0;
         public string Name;
         public string Species;
-        public bool isRobot = false;
+        public bool isRobot;
 
         private SoundPlayer CanOpen = new SoundPlayer(@"..\..\..\..\Sounds\can_open.wav");
         private SoundPlayer Squeak = new SoundPlayer(@"..\..\..\..\Sounds\squeak.wav");
-        private SoundPlayer Beep = new SoundPlayer(@"..\..\..\..\Sounds\beep.wav");
+        public SoundPlayer Beep = new SoundPlayer(@"..\..\..\..\Sounds\beep.wav");
 
 
         public Pet()
@@ -27,7 +27,7 @@ namespace VirtualPet
 		{
 			this.Name = name;
 			this.Species = species;
-           
+            this.isRobot = false;
 		}
 
 
@@ -104,7 +104,7 @@ namespace VirtualPet
             CanOpen.Play();
         }
         //take pet to doctor. use petname.SeeDoctor() in program.cs to call function
-        public void SeeDoctor()
+        public virtual void SeeDoctor()
         {
             //vet increase health by 40
             this.Health += 40;

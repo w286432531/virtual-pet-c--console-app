@@ -126,19 +126,16 @@ namespace VirtualPet
 		
 		public void addtoShelter(Pet homelessPet)
         {
+		
 			ShelterList.Add(homelessPet);
         }
 
 
-		public void RemovefromShelter(Pet homelessPet)
+		public void RemovefromShelter()
 		{
-			ShelterList.Remove(homelessPet);
+			Console.WriteLine("Which pet would you like to adopt?");
+			ShelterList.Remove(ChoosePet());
 		}
-
-		//public void  AdoptPet(Pet homelessPet)
-		//{
-			//RemovefromShelter(homelessPet);
-		//}
 
 
 	}
