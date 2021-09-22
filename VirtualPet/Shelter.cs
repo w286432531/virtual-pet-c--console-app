@@ -14,11 +14,8 @@ namespace VirtualPet
 		//public List <Pet> PetList { get; set; }
 		public List<Pet> ShelterList = new List<Pet>();
 
-
-	
-		SoundPlayer DoorOpen = new SoundPlayer(@"..\..\..\..\Sounds\door_open.wav");
-		SoundPlayer DoorClose = new SoundPlayer(@"..\..\..\..\Sounds\door_close.wav");
-
+		private SoundPlayer DoorOpen = new SoundPlayer(@"..\..\..\..\Sounds\door_open.wav");
+		private SoundPlayer DoorClose = new SoundPlayer(@"..\..\..\..\Sounds\door_close.wav");
 
 		public Shelter()
 		{
@@ -50,6 +47,7 @@ namespace VirtualPet
             {
 				InteractWithAllPets();
             }
+			DoorOpen.Play();
 		}
 		
 		public Pet ChoosePet()
@@ -59,8 +57,10 @@ namespace VirtualPet
                 Console.WriteLine(i+1 + "." + ShelterList[i].Name);
             }
 			int index = Convert.ToInt32(Console.ReadLine())-1;
+
 			//Need to find compatible sound.
 			//DoorOpen.Play();
+      
 			return ShelterList[index];
 		}
 
@@ -124,15 +124,16 @@ namespace VirtualPet
 			}
 		}
 		
-			public void addtoShelter(Pet homelessPet)
-            {
-			 ShelterList.Add(homelessPet);
-            }
+		public void addtoShelter(Pet homelessPet)
+        {
+			ShelterList.Add(homelessPet);
+        }
 
-		    public void RemovefromShelter()
-		    {
-			ShelterList.Remove(ChoosePet());
-		    }
+
+		public void RemovefromShelter(Pet homelessPet)
+		{
+			ShelterList.Remove(homelessPet);
+		}
 
 		//public void  AdoptPet(Pet homelessPet)
 		//{
