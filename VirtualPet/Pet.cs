@@ -79,8 +79,8 @@ namespace VirtualPet
 		{
 			Console.WriteLine("Hunger: " + this.Hunger);
 			Console.WriteLine("Boredom: " + this.Boredom);
-			Console.WriteLine("Health: " + this.Health);
-		}
+			Console.WriteLine("Health: " + this.Health);           
+        }
 
         
 
