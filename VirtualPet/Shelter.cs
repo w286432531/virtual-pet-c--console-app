@@ -9,7 +9,7 @@ using System.Media;
 
 namespace VirtualPet
 {
-	class Shelter
+	public class Shelter
 	{
 		//tbd
 		//public List <Pet> PetList { get; set; }
@@ -156,15 +156,16 @@ namespace VirtualPet
 		{
 			Console.WriteLine("Which pet would you like to adopt?");
 			Pet toRemove = ChoosePet();
-			ShelterList.Remove(toRemove);
+			RemoveFromShelter(toRemove);
 		}
 
 		public void AddToShelter(Pet newPet)
 		{
 			ShelterList.Add(newPet);
 		}
-
-	
-
+		public void RemoveFromShelter(Pet ChosenPet)
+		{
+			ShelterList.Remove(ChosenPet);
+		}
 	}
 }
