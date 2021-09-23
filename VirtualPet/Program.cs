@@ -19,9 +19,12 @@ namespace VirtualPet
         // testing the shelter list view pets and interact function
         //Shelter myShelter = new Shelter();
 
+
+           
             Pet myPet1 = new Pet("Spot", "dog");
             Pet myPet2 = new Pet("Muffy", "dog");
-            Pet myPet3 = new Pet("Charlie", "dog");
+            Pet myPet3 = new Pet("Charlie", "cat");
+
             myShelter.ShelterList.Add(myPet1);
             myShelter.ShelterList.Add(myPet2);
             myShelter.ShelterList.Add(myPet3);
@@ -46,7 +49,6 @@ namespace VirtualPet
                 Console.WriteLine("2. Interact with a pet or all pets.");
                 Console.WriteLine("3. View Status of all pets");
                 Console.WriteLine("4. Adopt a pet.");
-                
                 
                 Console.WriteLine("enter Q to quit");
 
@@ -134,12 +136,12 @@ namespace VirtualPet
             {
 				Console.WriteLine("Creating a Robot...");
                 RoboPet newPet = new RoboPet(petName, petSpecies);
-                myShelter.addtoShelter(newPet);
+                myShelter.ShelterList.Add(newPet);
             } else
 			{
 				Console.WriteLine("Adding your pet...");
                 Pet newPet = new Pet(petName, petSpecies);
-                myShelter.addtoShelter(newPet);
+                myShelter.ShelterList.Add(newPet);
 				Console.WriteLine("Congratulations on your new pet!");
             }
             Thread.Sleep(1000);

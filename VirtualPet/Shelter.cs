@@ -101,9 +101,14 @@ namespace VirtualPet
 					default:
 						break;
 				}
+
 				Thread.Sleep(1000);
 				Console.Clear();
 			}
+
+			}
+			
+
 			else
 			{
 				Console.WriteLine("1. Charge the pet");
@@ -168,24 +173,11 @@ namespace VirtualPet
 			Console.Clear();
 		}
 		
-		public void addtoShelter(Pet homelessPet)
-        {
-		
-			ShelterList.Add(homelessPet);
-        }
-
-
-		public void RemovefromShelter(Pet homelessPet)
-		{
-			
-			ShelterList.Remove(homelessPet);
-		}
-
 		public void Adopt()
 		{
 			Console.WriteLine("Which pet would you like to adopt?");
 			Pet toRemove = ChoosePet();
-			RemovefromShelter(toRemove);
+			ShelterList.Remove(toRemove);
 		}
 
 	}
