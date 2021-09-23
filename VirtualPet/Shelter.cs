@@ -17,6 +17,7 @@ namespace VirtualPet
 
 		private SoundPlayer DoorOpen = new SoundPlayer(@"..\..\..\..\Sounds\door_open.wav");
 		private SoundPlayer DoorClose = new SoundPlayer(@"..\..\..\..\Sounds\door_close.wav");
+		private object shelterList;
 
 		public Shelter()
 		{
@@ -105,8 +106,6 @@ namespace VirtualPet
 				Thread.Sleep(1000);
 				Console.Clear();
 			}
-
-			}
 			
 
 			else
@@ -179,6 +178,13 @@ namespace VirtualPet
 			Pet toRemove = ChoosePet();
 			ShelterList.Remove(toRemove);
 		}
+
+		public void AddToShelter(Pet newPet)
+		{
+			ShelterList.Add(newPet);
+		}
+
+	
 
 	}
 }
