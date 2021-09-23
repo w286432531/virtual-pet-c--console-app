@@ -178,17 +178,14 @@ namespace VirtualPet
 			Pet toRemove = ChoosePet();
 			RemoveFromShelter(toRemove);
 		}
-		public void RemoveFromShelter(Pet ChosenPet)
-        {
-			ShelterList.Remove(ChosenPet);
 
-		}
 		public void AddToShelter(Pet newPet)
 		{
 			ShelterList.Add(newPet);
 		}
-
-	
-
+		public void RemoveFromShelter(Pet ChosenPet)
+		{
+			ShelterList.Remove(ChosenPet);
+		}
 	}
 }
