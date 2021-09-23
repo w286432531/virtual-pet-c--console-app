@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +25,7 @@ namespace VirtualPet
 
 		public void GetStatusAll()
 		{
-			string divider = new string('-', 60);
+			string divider = new string('-', 81);
 			Console.Clear();
 			Console.WriteLine(divider);
 			foreach (var pet in ShelterList)
@@ -37,8 +38,8 @@ namespace VirtualPet
 				{
 					Console.WriteLine(pet.Name + "\t\t Battery: " + (100-pet.Hunger)+"%" + "\t\t Boredom: " + pet.Boredom + "\t\t Maintenance: " + pet.Health);
 				}
-				
 			}
+			Console.WriteLine(divider);
 		}
 		//use myShelter.Interact(); in program.cs to call this method.
 		public void Interact()
@@ -46,6 +47,7 @@ namespace VirtualPet
             Console.WriteLine("1. Interact with one pet.");
 			Console.WriteLine("2. Interact with all pets.");
 			int index = Convert.ToInt32(Console.ReadLine());
+			Console.Clear();
 			if (index == 1)
             {
 				Pet chosenPet = ChoosePet();
@@ -65,10 +67,10 @@ namespace VirtualPet
                 Console.WriteLine(i+1 + "." + ShelterList[i].Name);
             }
 			int index = Convert.ToInt32(Console.ReadLine())-1;
-
+			Console.Clear();
 			//Need to find compatible sound.
 			//DoorOpen.Play();
-      
+
 			return ShelterList[index];
 		}
 
@@ -81,6 +83,7 @@ namespace VirtualPet
 				Console.WriteLine("2. Feed");
 				Console.WriteLine("3. See vet");
 				int index = Convert.ToInt32(Console.ReadLine());
+				
 				switch (index)
 				{
 					case 1:
@@ -98,8 +101,14 @@ namespace VirtualPet
 					default:
 						break;
 				}
+
+				Thread.Sleep(1000);
+				Console.Clear();
+			}
+
 			}
 			
+
 			else
 			{
 				Console.WriteLine("1. Charge the pet");
@@ -123,6 +132,8 @@ namespace VirtualPet
 					default:
 						break;
 				}
+				Thread.Sleep(1000);
+				Console.Clear();
 			}
         }
 
@@ -157,8 +168,9 @@ namespace VirtualPet
 					break;
 				default:
 					break;
-
 			}
+			Thread.Sleep(1000);
+			Console.Clear();
 		}
 		
 		public void Adopt()
