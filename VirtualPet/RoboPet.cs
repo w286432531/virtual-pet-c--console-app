@@ -15,9 +15,9 @@ namespace VirtualPet
 			this.Name = name;
 			this.Species = species;
 			this.isRobot = true;
-			this.Health = 100;
-			this.Boredom = 0;
-			this.Hunger = 0;
+			this.Health = 30;
+			this.Boredom = 60;
+			this.Hunger = 50;
 		}
 
 

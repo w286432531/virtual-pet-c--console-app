@@ -25,54 +25,54 @@ namespace VirtualPet.Tests
         [Fact]
         public void Pet_Should_Have_Name()
         {
-            // testPet.Name = "Pet Name"; 
-            
-            // Assert.Equal("Pet Name", testPet.Name);
-        }
+			testPet.Name = "Pet Name";
+
+			Assert.Equal("Pet Name", testPet.Name);
+		}
 
         [Fact]
         public void SetName_Should_Assign_Pet_Name_Property()
         {
-            // testPet.SetName("Fluffy");
+			testPet.SetName("Fluffy");
 
-            // Assert.Equal("Fluffy", testPet.Name);
-        }
+			Assert.Equal("Fluffy", testPet.Name);
+		}
 
         [Fact]
         public void GetName_Should_Get_Pet_Name_Value()
         {
-            // testPet.SetName("Fido");
+			testPet.SetName("Fido");
 
-            // string testPetName = testPet.GetName();
+			string testPetName = testPet.GetName();
 
-            // Assert.Equal("Fido", testPetName);
-        }
+			Assert.Equal("Fido", testPetName);
+		}
 
         [Fact]
         public void Pet_Should_Have_Species()
         {
-            // testPet.Species = "Pet Species";
-            
-            // Assert.Equal("Pet Species", testPet.Species);
-        }
+			testPet.Species = "Pet Species";
+
+			Assert.Equal("Pet Species", testPet.Species);
+		}
 
         [Fact]
         public void SetSpecies_Should_Assign_Pet_Species_Property()
         {
-            // testPet.SetSpecies("Cat");
+			testPet.SetSpecies("Cat");
 
-            // Assert.Equal("Cat", testPet.Species);
-        }
+			Assert.Equal("Cat", testPet.Species);
+		}
 
         [Fact]
         public void GetSpecies_Should_Get_Pet_Species_Value()
         {
-            // testPet.SetSpecies("Dog");
+			testPet.SetSpecies("Dog");
 
-            // string testPetSpecies = testPet.GetSpecies();
+			string testPetSpecies = testPet.GetSpecies();
 
-            // Assert.Equal("Dog", testPetSpecies);
-        }
+			Assert.Equal("Dog", testPetSpecies);
+		}
 
         [Fact]
         public void Pet_Should_Have_Hunger()
@@ -85,10 +85,10 @@ namespace VirtualPet.Tests
         [Fact]
         public void GetHunger_Should_Return_Initial_Hunger_Level_Of_50()
         {
-            //int testPetHunger = testPet.GetHunger();
+			int testPetHunger = testPet.GetHunger();
 
-           // Assert.Equal(50, testPetHunger);
-        }
+			Assert.Equal(50, testPetHunger);
+		}
 
         [Fact]
         public void Pet_Should_Have_Boredom()
