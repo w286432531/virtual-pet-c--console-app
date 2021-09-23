@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,24 +41,6 @@ namespace VirtualPet
 				}
 			}
 			Console.WriteLine(divider);
-		}
-		//use myShelter.Interact(); in program.cs to call this method.
-		public void Interact()
-        {
-            Console.WriteLine("1. Interact with one pet.");
-			Console.WriteLine("2. Interact with all pets.");
-			int index = Convert.ToInt32(Console.ReadLine());
-			Console.Clear();
-			if (index == 1)
-            {
-				Pet chosenPet = ChoosePet();
-				InteractWithOnePet(chosenPet);
-            }
-			else if (index == 2)
-            {
-				InteractWithAllPets();
-            }
-			//DoorOpen.Play();
 		}
 		
 		public Pet ChoosePet()
@@ -106,8 +88,6 @@ namespace VirtualPet
 				Thread.Sleep(1000);
 				Console.Clear();
 			}
-			
-
 			else
 			{
 				Console.WriteLine("1. Charge the pet");

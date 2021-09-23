@@ -46,9 +46,10 @@ namespace VirtualPet
                 Console.WriteLine();
                 Console.WriteLine("Make a Selection");
                 Console.WriteLine("1. Add new pet to the shelter.");
-                Console.WriteLine("2. Interact with a pet or all pets.");
-                Console.WriteLine("3. View Status of all pets");
-                Console.WriteLine("4. Adopt a pet.");
+                Console.WriteLine("2. Interact with one pet.");
+                Console.WriteLine("3. Interact with all pets in the shelter.");
+                Console.WriteLine("4. View Status of all pets");
+                Console.WriteLine("5. Adopt a pet.");
                 
                 Console.WriteLine("enter Q to quit");
 
@@ -66,17 +67,18 @@ namespace VirtualPet
                         break;
 
                     case "2":
-
-                        // insert feed pet here
-                        myShelter.Interact();
+                        myShelter.InteractWithOnePet(myShelter.ChoosePet());
                         break;
 
                     case "3":
+                        myShelter.InteractWithAllPets();
+                        break;
+                    case "4":
                         // insert checking status of ALL pets
                         myShelter.GetStatusAll();
                         break;
 
-                    case "4":
+                    case "5":
 
                         // Remove the pet in the shelter
                         myShelter.Adopt();
