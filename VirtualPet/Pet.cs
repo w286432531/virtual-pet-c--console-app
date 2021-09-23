@@ -90,6 +90,9 @@ namespace VirtualPet
         }
         public Pet()
         {
+            this.Health = 30;
+            this.Hunger = 50;
+            this.Boredom = 60;
         }
         public Pet(string name, string species)
 		{
@@ -187,7 +190,7 @@ namespace VirtualPet
         public void SeeDoctor()
         {
             //vet increase health by 40
-            this.Health += 40;
+            this.Health += 30;
             this.Boredom -= 20;
             if (this.isRobot == true)
             {
