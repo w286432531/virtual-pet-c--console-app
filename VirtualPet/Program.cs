@@ -138,7 +138,7 @@ namespace VirtualPet
             {
 				Console.WriteLine("Creating a Robot...");
                 RoboPet newPet = new RoboPet(petName, petSpecies);
-                myShelter.ShelterList.Add(newPet);
+                myShelter.AddToShelter(newPet);
             } else
 			{
 				Console.WriteLine("Adding your pet...");
