@@ -26,11 +26,18 @@ namespace VirtualPet
 		{
 			string divider = new string('-', 60);
 			Console.Clear();
-			Console.WriteLine("Name\t\tHunger\t\tBoredom\t\tHealth");
 			Console.WriteLine(divider);
 			foreach (var pet in ShelterList)
 			{
-				Console.WriteLine(pet.Name + "\t\t" + pet.Hunger + "\t\t" + pet.Boredom + "\t\t" + pet.Health);
+				if (pet.isRobot == false)
+				{
+					Console.WriteLine(pet.Name + "\t\t Hunger: "+ pet.Hunger + "\t\t Boredom: " + pet.Boredom + "\t\t Health: " + pet.Health);
+				}
+				else 
+				{
+					Console.WriteLine(pet.Name + "\t\t Battery: " + (100-pet.Hunger)+"%" + "\t\t Boredom: " + pet.Boredom + "\t\t Maintenance: " + pet.Health);
+				}
+				
 			}
 		}
 		//use myShelter.Interact(); in program.cs to call this method.

@@ -31,16 +31,5 @@ namespace VirtualPet
 			// to utilize the health, boredom, and Hunger variables
 		}
 
-		public override void SeeDoctor()
-		{
-			//vet increase health by 40
-			this.Health += 40;
-			//this.Boredom -= 20; - removed for robopet
-			Beep.Play();
-		}
-
-
-
-
 	}
 }
