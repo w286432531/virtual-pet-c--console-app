@@ -1,29 +1,30 @@
 ﻿using System;
 using System.Threading;
+using System.Media;
 
 namespace VirtualPet
 {
     class Program
     {
         static Shelter myShelter = new Shelter();
+        static SoundPlayer Bark = new SoundPlayer(@"..\..\..\..\Sounds\bark.wav");
+        static SoundPlayer Alert = new SoundPlayer(@"..\..\..\..\Sounds\alert.wav");
         static void Main(string[] args)
         {
             CatPicture.PrintCatPicture();
-            Timer _timer = new Timer(Tick, null, 0, 15000);
+            Timer _timer = new Timer(Tick, null, 0, 1000);
+            // warns player when pet status is very low
+            Timer _warningtimer = new Timer(WarnMe, null, 0, 5000);
+        // Kevin and Jay 9/20----------
+        // testing the shelter list view pets and interact function
+        //Shelter myShelter = new Shelter();
 
-            // Kevin and Jay 9/20----------
-            // testing the shelter list view pets and interact function
-            Shelter myShelter = new Shelter();
-            
-
-
-            
             Pet myPet1 = new Pet("spot", "dog");
-
             Pet myPet2 = new Pet("muffy", "dog");
             Pet myPet3 = new Pet("charlie", "dog");
             myShelter.ShelterList.Add(myPet1);
             myShelter.ShelterList.Add(myPet2);
+            myShelter.ShelterList.Add(myPet3);
 
             RoboPet Tobor = new RoboPet("Tobor", "robot");
             Tobor.GetStatus();
@@ -32,7 +33,8 @@ namespace VirtualPet
 
 
             bool playing = true;
-
+            
+     
 
             while (playing)
             {
@@ -85,13 +87,40 @@ namespace VirtualPet
 
 
                 }
-                //Tick();
                 
             }
         }
-        public static void Tick(object o) 
+        public static void Tick(object o)
         {
-            //testPet.Tick();
+            foreach (Pet p in myShelter.ShelterList)
+            {
+                p.Tick();
+     
+            }
+
+        }
+
+        public static void WarnMe(object o)
+        {
+            foreach (Pet p in myShelter.ShelterList)
+            {
+                if (p.Hunger > 80 || p.Health < 20 || p.Boredom > 80)
+                {
+                    if (p.isRobot == true)
+                    {
+                        Alert.Play();
+                        break;
+                    }
+                        
+                    else
+                    {
+                        Bark.Play();
+                        break;
+                    }
+                        
+                }
+            }
+
         }
         public static void CreatePet()
         {
