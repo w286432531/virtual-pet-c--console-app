@@ -160,6 +160,7 @@ namespace VirtualPet.Tests
             // testPet.Play();
 
             // Assert.Equal(40, testPet.GetHealth());
+
         }
 
         [Fact]
