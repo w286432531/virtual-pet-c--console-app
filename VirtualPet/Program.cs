@@ -19,9 +19,9 @@ namespace VirtualPet
         // testing the shelter list view pets and interact function
         //Shelter myShelter = new Shelter();
 
-            Pet myPet1 = new Pet("spot", "dog");
-            Pet myPet2 = new Pet("muffy", "dog");
-            Pet myPet3 = new Pet("charlie", "dog");
+            Pet myPet1 = new Pet("Spot", "dog");
+            Pet myPet2 = new Pet("Muffy", "dog");
+            Pet myPet3 = new Pet("Charlie", "dog");
             myShelter.ShelterList.Add(myPet1);
             myShelter.ShelterList.Add(myPet2);
             myShelter.ShelterList.Add(myPet3);
