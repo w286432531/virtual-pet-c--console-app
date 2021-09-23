@@ -12,9 +12,9 @@ namespace VirtualPet
         static void Main(string[] args)
         {
             CatPicture.PrintCatPicture();
-            Timer _timer = new Timer(Tick, null, 0, 1000);
+            Timer _timer = new Timer(Tick, null, 0, 10000);
             // warns player when pet status is very low
-            Timer _warningtimer = new Timer(WarnMe, null, 0, 5000);
+            Timer _warningtimer = new Timer(WarnMe, null, 0, 10000);
         // Kevin and Jay 9/20----------
         // testing the shelter list view pets and interact function
         //Shelter myShelter = new Shelter();
@@ -77,7 +77,7 @@ namespace VirtualPet
                     case "4":
 
                         // Remove the pet in the shelter
-                        myShelter.RemovefromShelter();
+                        myShelter.Adopt();
                         break;
 
                     case "q":
