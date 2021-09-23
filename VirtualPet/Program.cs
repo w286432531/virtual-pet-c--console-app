@@ -42,7 +42,10 @@ namespace VirtualPet
             while (playing)
             {
                 Console.WriteLine();
-                Console.WriteLine("Hello! Welcome to Virtual Pets");
+                string divider = new string('=', 83);
+                Console.WriteLine(divider);
+                Title.PrintTitle();
+                Console.WriteLine(divider);
                 Console.WriteLine();
                 Console.WriteLine("Make a Selection");
                 Console.WriteLine("1. Add new pet to the shelter.");
