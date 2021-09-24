@@ -57,13 +57,13 @@ MAIN MENU: Here you will see the title screen along with numbered actions
 BOREDOM: Your pets get bored overtime, so you have to PLAY with them
          to keep them happy. To perform the PLAY action
          navigate from the MAIN MENU to select one or all
-         pets and select one or all pets and select PLAY.
+         pets and select PLAY.
 
 
 HUNGER:  Your pets get hungry overtime, so you have to FEED them
          to keep them happy. To perform the FEED action
          navigate from the MAIN MENU to select one or all
-         pets and select one or all pets and select FEED.
+         pets and select FEED.
 
 
 HEALTH METER: Your pets can get sick overtime, so you have to take them 
@@ -83,7 +83,7 @@ BATTERY: Your robot pets get drained overtime, so you have to CHARGE them
 
 MAINTENANCE: Your pets get damaged overtime, so you have to FEED them
              to keep them happy. To perform the FEED action
-             navigate from the MAIN MENU to select ONE or ALL
+             navigate from the MAIN MENU to select one or all
              pets and select FEED.
 
 
