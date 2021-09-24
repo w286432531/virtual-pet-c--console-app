@@ -40,7 +40,8 @@ In the virtual pet game, you can select and perform activities such as:
 
 MAIN MENU: Here, you will see the title screen along with numbered actions.           
            The numbers next to the description correspond with the action.
-               _____________________________________________________
+               
+	       _____________________________________________________
               |EXAMPLE:    3. Interact with all pets in the shelter.|
               |            ^                                 ^      |
               |            |                                 |      |
