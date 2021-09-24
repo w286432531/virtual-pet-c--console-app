@@ -14,10 +14,13 @@ namespace VirtualPet
 		//tbd
 		//public List <Pet> PetList { get; set; }
 		public List<Pet> ShelterList = new List<Pet>();
+		//private object shelterList;
 
-		private SoundPlayer DoorOpen = new SoundPlayer(@"..\..\..\..\Sounds\door_open.wav");
-		private SoundPlayer DoorClose = new SoundPlayer(@"..\..\..\..\Sounds\door_close.wav");
-		private object shelterList;
+		protected SoundPlayer CanOpen = new SoundPlayer(@"..\..\..\..\Sounds\can_open.wav");
+		protected SoundPlayer Squeak = new SoundPlayer(@"..\..\..\..\Sounds\squeak.wav");
+		protected SoundPlayer Beep = new SoundPlayer(@"..\..\..\..\Sounds\beep.wav");
+		protected SoundPlayer Charge = new SoundPlayer(@"..\..\..\..\Sounds\charge.wav");
+		protected SoundPlayer Weld = new SoundPlayer(@"..\..\..\..\Sounds\weld.wav");
 
 		public Shelter()
 		{
@@ -33,11 +36,11 @@ namespace VirtualPet
 			{
 				if (pet.isRobot == false)
 				{
-					Console.WriteLine(pet.Name + "\t\t Hunger: "+ pet.Hunger + "\t\t Boredom: " + pet.Boredom + "\t\t Health: " + pet.Health);
+					Console.WriteLine(pet.Name + " ("+pet.Species+")"+"\t\t Hunger: "+ pet.Hunger + "\t\t Boredom: " + pet.Boredom + "\t\t Health: " + pet.Health);
 				}
 				else 
 				{
-					Console.WriteLine(pet.Name + "\t\t Battery: " + (100-pet.Hunger)+"%" + "\t\t Boredom: " + pet.Boredom + "\t\t Maintenance: " + pet.Health);
+					Console.WriteLine(pet.Name + " (" + pet.Species + ")" + "\t\t Battery: " + (100-pet.Hunger)+"%" + "\t\t Boredom: " + pet.Boredom + "\t\t Maintenance: " + pet.Health);
 				}
 			}
 			Console.WriteLine(divider);
@@ -71,15 +74,21 @@ namespace VirtualPet
 				{
 					case 1:
 						chosenPet.Play();
+						Pics.BallPic();
 						Console.WriteLine("Playing with the pet.");
+						Squeak.Play();
 						break;
 					case 2:
 						chosenPet.Feed();
+						Pics.BowlPic();
 						Console.WriteLine("Feeding the pet.");
+						CanOpen.Play();
 						break;
 					case 3:
 						chosenPet.SeeDoctor();
+						Pics.DoctorPic();
 						Console.WriteLine("Taking pet to the doctor.");
+						Beep.Play();
 						break;
 					default:
 						break;
@@ -98,15 +107,21 @@ namespace VirtualPet
                 {
 					case 1:
 						chosenPet.Feed();
-						Console.WriteLine("Charge the pet.");
+						Pics.PowerPic();
+						Console.WriteLine("Charging the pet.");
+						Charge.Play();
 						break;
 					case 2:
 						chosenPet.SeeDoctor();
-						Console.WriteLine("Take pet for maintenance.");
+						Pics.WrenchPic();
+						Console.WriteLine("Taking pet in for maintenance.");
+						Weld.Play();
 						break;
 					case 3:
 						chosenPet.Play();
+						Pics.BallPic();
 						Console.WriteLine("Playing with robotic pet.");
+						Squeak.Play();
 						break;
 					default:
 						break;
@@ -129,21 +144,27 @@ namespace VirtualPet
 					{
 						pet.Play();
 					}
+					Pics.BallPic();
 					Console.WriteLine("Playing with all pets.");
+					Squeak.Play();
 					break;
 				case 2:
 					foreach (var pet in ShelterList)
 					{
 						pet.Feed();
 					}
-					Console.WriteLine("Feeding all the pets.");
+					Pics.BowlPic();
+					Console.WriteLine("Feeding/Charging all the pets.");
+					CanOpen.Play();
 					break;
 				case 3:
 					foreach (var pet in ShelterList)
 					{
 						pet.SeeDoctor();
 					}
-					Console.WriteLine("Taking all pets to the doctor.");
+					Pics.DoctorPic();
+					Console.WriteLine("Taking all pets to the doctor/mechanic.");
+					Beep.Play();
 					break;
 				default:
 					break;
@@ -157,6 +178,7 @@ namespace VirtualPet
 			Console.WriteLine("Which pet would you like to adopt?");
 			Pet toRemove = ChoosePet();
 			RemoveFromShelter(toRemove);
+			Pics.AdoptPic();
 		}
 
 		public void AddToShelter(Pet newPet)

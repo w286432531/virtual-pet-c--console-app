@@ -4,10 +4,13 @@ using System.Media;
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace VirtualPet
 {
     public class Pet
     {
+        
+
         public int health;
         public int boredom;
         public int hunger;
@@ -15,12 +18,6 @@ namespace VirtualPet
         public string Name;
         public string Species;
         public bool isRobot;
-       
-        protected SoundPlayer CanOpen = new SoundPlayer(@"..\..\..\..\Sounds\can_open.wav");
-        protected SoundPlayer Squeak = new SoundPlayer(@"..\..\..\..\Sounds\squeak.wav");
-        protected SoundPlayer Beep = new SoundPlayer(@"..\..\..\..\Sounds\beep.wav");
-        protected SoundPlayer Charge = new SoundPlayer(@"..\..\..\..\Sounds\charge.wav");
-        protected SoundPlayer Beeping = new SoundPlayer(@"..\..\..\..\Sounds\beeping.wav");
 
         public int Health
         {
@@ -167,8 +164,6 @@ namespace VirtualPet
             this.Boredom -= 20;
             //play increase health by 10
             this.Health += 10;
-            Squeak.Play();
-            
         }
         // adding ability to feed the pet. use petname.play() in program.cs to call funcion
         public void Feed()
@@ -176,15 +171,6 @@ namespace VirtualPet
             //feed decrease hunger by 40
             this.Hunger -= 40;
             this.Boredom += 10;
-            if (this.isRobot == true)
-            {
-                Charge.Play();
-            }
-            else
-            {
-                CanOpen.Play();
-            }
-            
         }
         //take pet to doctor. use petname.SeeDoctor() in program.cs to call function
         public void SeeDoctor()
@@ -192,16 +178,6 @@ namespace VirtualPet
             //vet increase health by 40
             this.Health += 30;
             this.Boredom -= 20;
-            if (this.isRobot == true)
-            {
-                
-                Beeping.Play();
-            }
-            else
-            {
-                Beep.Play();
-            }
-            
         }
     }
 }
