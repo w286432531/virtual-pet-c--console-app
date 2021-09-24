@@ -11,21 +11,25 @@ Virtual Toys, Inc ©
 ==========================
     .:DESCRIPTION:.
 ==========================
-In virtual pet game you can select and perform activities such as 
+In the virtual pet game, you can select and perform activities such as: 
 
-* Feeding your pet
+* Adding your pet to the virtual shelter...
 
-* Playing with your pet
+* Adopting your pet from the shelter...
 
-* Taking your pet to the vet!
+* Feeding your pet...
 
-* Manging boredom, hunger, health
+* Playing with your pet...
+
+* Taking your pet to the vet...
+
+* Managing boredom, hunger, and health...
 
 =========================
-     .:FEATURES:.
+   .:EXTRA FEATURES:.
 =========================
 
-* Art!
+* ASCII Art!
 
 * Sounds!
 
@@ -34,8 +38,8 @@ In virtual pet game you can select and perform activities such as
     .:INSTRUCTIONS:.
 ==========================
 
-MAIN MENU: Here you will see the title screen along with numbered actions           
-           the numbers next to the description corresponds with the action
+MAIN MENU: Here, you will see the title screen along with numbered actions.           
+           The numbers next to the description correspond with the action.
                _____________________________________________________
               |EXAMPLE:    3. Interact with all pets in the shelter.|
               |            ^                                 ^      |
@@ -44,39 +48,36 @@ MAIN MENU: Here you will see the title screen along with numbered actions
               |_____________________________________________________|
   
 
-BOREDOM: Your pets get bored overtime, so you have to PLAY with them
-         to keep them happy. To perform the PLAY action
+BOREDOM: Your pets get bored over time, so you have to PLAY with them
+         to keep them happy. To perform the PLAY action,
          navigate from the MAIN MENU to select one or all
          pets and select PLAY.
 
 
-HUNGER:  Your pets get hungry overtime, so you have to FEED them
-         to keep them happy. To perform the FEED action
+HUNGER:  Your pets get hungry over time, so you have to FEED them
+         to keep their hunger level low. To perform the FEED action
          navigate from the MAIN MENU to select one or all
          pets and select FEED.
 
 
-HEALTH METER: Your pets can get sick overtime, so you have to take them 
+HEALTH METER: Your pets health level can get low, so you have to take them 
               to the Doctor to keep them Healthy. To perform the 
               TAKE TO DOCTOR action navigate from the MAIN MENU 
               to select one or all pets and select TAKE TO DOCTOR action.
 
-ROBOT PETS: They are the same as normal pets other than being a robot 
-            so HUNGER and HEALTH does not apply, but BATTERY and MAINTENANCE.
+ROBOT PETS: They are the same as normal pets, other than being a robot 
+            so HUNGER and HEALTH do not apply, but BATTERY and MAINTENANCE do!
+	    Robot pets get added to the shelter and adopted just like the others.
 
-
-BATTERY: Your robot pets get drained overtime, so you have to CHARGE them
-         to keep them happy. To perform the CHARGE action
+BATTERY: Your robot pets' batteries get drained overtime, so you have to CHARGE them
+         to keep them running. To perform the CHARGE action
          navigate from the MAIN MENU to select one or all
          pets and select CHARGE.
 
 
-MAINTENANCE: Your pets get damaged overtime, so you have to FEED them
-             to keep them happy. To perform the FEED action
-             navigate from the MAIN MENU to select one or all
-             pets and select FEED.
-
-
+MAINTENANCE: Your pet need regular maintenance over time, so you have to take them for MAINTENANCE 
+             to keep them functioning properly. To perform the TAKE FOR MAINTENANCE action,
+             navigate from the MAIN MENU to select the robopet pet and select TAKE FOR MAINTENANCE.
 
 
 ==========================
@@ -126,8 +127,21 @@ MAINTENANCE: Your pets get damaged overtime, so you have to FEED them
     Boredom - 20
 
 ==========================
- 
 
+ADD PET TO SHELTER: When you first started, the shelter already contains a few dogs that need
+	            your help.  To add to the brood, navigate FROM the MAIN MENU to select
+	            ADD NEW PET TO THE SHELTER. Just enter the name and species of your pet
+	            when asked.  (Note: RoboPets must be assigned the species ROBOT).
+
+ADOPT PET: When you adopt a pet, you are removing your pet from the shelter (and the game)!
+	   To adopt, navigate FROM the MAIN MENU to select ADOPT A PET.  Then just select your
+	   pet.  The resulting change to the shelter can be checked by VIEWING STATUS...
+ 
+VIEW STATUS: You should check in on the status of your pet(s) regularly in order
+	     to keep them happy, healthy or maintained, and fed or charged. To perform 
+	     the VIEW STATUS action, navigate FROM the MAIN MENU to select VIEW STATUS
+	     OF ALL PETS.  This will give you a quick overview of how they're doing,
+	     even for robopets! 
 
 
 
