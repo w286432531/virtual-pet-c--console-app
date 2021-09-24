@@ -173,6 +173,7 @@ namespace VirtualPet
 			Pet toRemove = ChoosePet();
 			RemoveFromShelter(toRemove);
 			Pics.AdoptPic();
+			Console.Clear();
 		}
 
 		public void AddToShelter(Pet newPet)

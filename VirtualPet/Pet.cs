@@ -146,13 +146,6 @@ namespace VirtualPet
             return this.Species;
 		}
 
-        public virtual void GetStatus()
-		{
-			Console.WriteLine("Hunger: " + this.Hunger);
-			Console.WriteLine("Boredom: " + this.Boredom);
-			Console.WriteLine("Health: " + this.Health);           
-        }
-
       // adding ability to play with pet. use petname.play() in program.cs to call function
       public void Play()
         {

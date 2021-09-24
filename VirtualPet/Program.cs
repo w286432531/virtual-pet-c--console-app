@@ -25,7 +25,7 @@ namespace VirtualPet
             myShelter.ShelterList.Add(myPet3);
 
             RoboPet Tobor = new RoboPet("Tobor", "robot");
-            Tobor.GetStatus();
+            //Tobor.GetStatus();
             Tobor.Name = "Tobor";
             myShelter.ShelterList.Add(Tobor);
 
