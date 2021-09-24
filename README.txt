@@ -9,9 +9,9 @@ Virtual Toys, Inc
 
 (same as .:WHAT YOU CAN DO:. i guess i dont know...TBD )
 ==========================
-    .:description:.
+    .:DESCRIPTION:.
 ==========================
-In a virtual pet game you select and perform activities such as 
+In virtual pet game you can select and perform activities such as 
 
 * Feeding your pet
 
@@ -20,59 +20,6 @@ In a virtual pet game you select and perform activities such as
 * Taking your pet to the vet!
 
 * Manging boredom, hunger, health
-
-==========================
-    Table of contents
-==========================
-    .:INSTRUCTIONS:.
-.:WHAT YOU NEED TO START:.
-   .:WHAT YOU CAN DO:.
-      .:FEATURES:.
-
-
-==========================
-    .:INSTRUCTIONS:.
-==========================
-MAIN MENU: Here you will see the title screen along with numbered actions           
-           the numbers next to the description corresponds with the action
-               _____________________________________________________
-              |EXAMPLE:    3. Interact with all pets in the shelter.|
-              |            ^                                 ^      |
-              |            |                                 |      |
-              |this is what you would type  TO   perform this action|
-              |_____________________________________________________|
- 
-
-BOREDOM
-HUNGER
-HEALTH METER
-ROBOT PETS
-BATTERY
-MAINTENANCE
-
-
-==========================
-.:WHAT YOU NEED TO START:.
-==========================
-Visual Studio 2019
-
-
-
-
-
-
-=========================
-  .:WHAT YOU CAN DO:.
-=========================
-In virtual pet you can:
-
-*  Interact with pets.
-
-*  Keep them happy.
-
-*  Add pets.
-
-*  Adopt pets.
 
 =========================
      .:FEATURES:.
@@ -84,17 +31,74 @@ In virtual pet you can:
 
 
 
+==========================
+  .:TABLE OF CONTENTS:.
+==========================
+    .:INSTRUCTIONS:.
+.:WHAT YOU NEED TO START:.
+   .:WHAT YOU CAN DO:.
+      .:FEATURES:.
+
+
+==========================
+    .:INSTRUCTIONS:.
+==========================
+
+MAIN MENU: Here you will see the title screen along with numbered actions           
+           the numbers next to the description corresponds with the action
+               _____________________________________________________
+              |EXAMPLE:    3. Interact with all pets in the shelter.|
+              |            ^                                 ^      |
+              |            |                                 |      |
+              |this is what you would type  TO   perform this action|
+              |_____________________________________________________|
+  
+
+BOREDOM: Your pets get bored overtime, so you have to PLAY with them
+         to keep them happy. To perform the PLAY action
+         navigate from the MAIN MENU to select one or all
+         pets and select one or all pets and select PLAY.
+
+
+HUNGER:  Your pets get hungry overtime, so you have to FEED them
+         to keep them happy. To perform the FEED action
+         navigate from the MAIN MENU to select one or all
+         pets and select one or all pets and select FEED.
+
+
+HEALTH METER: Your pets can get sick overtime, so you have to take them 
+              to the Doctor to keep them Healthy. To perform the 
+              TAKE TO DOCTOR action navigate from the MAIN MENU 
+              to select one or all pets and select TAKE TO DOCTOR action.
+
+ROBOT PETS: They are the same as normal pets other than being a robot 
+            so HUNGER and HEALTH does not apply, but BATTERY and MAINTENANCE.
+
+
+BATTERY: Your robot pets get drained overtime, so you have to CHARGE them
+         to keep them happy. To perform the CHARGE action
+         navigate from the MAIN MENU to select one or all
+         pets and select CHARGE.
+
+
+MAINTENANCE: Your pets get damaged overtime, so you have to FEED them
+             to keep them happy. To perform the FEED action
+             navigate from the MAIN MENU to select ONE or ALL
+             pets and select FEED.
+
+
+
 
 ==========================
    .:STATS CHANGES:.
 ==========================
 
-   Starting stats
-         |
-         V
-     Health = 30
-     Hunger = 50
-     Boredom = 60
+    Starting stats
+          |
+          V
+      Health = 30
+      Hunger = 50
+      Boredom = 60
 
 ==========================
 
