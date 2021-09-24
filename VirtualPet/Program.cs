@@ -10,17 +10,15 @@ namespace VirtualPet
         static SoundPlayer Bark = new SoundPlayer(@"..\..\..\..\Sounds\bark.wav");
         static SoundPlayer Alert = new SoundPlayer(@"..\..\..\..\Sounds\alert.wav");
         static void Main(string[] args)
-        {
+        {   
             CatPicture.PrintCatPicture();
-            Timer _timer = new Timer(Tick, null, 0, 10000);
+            Timer _timer = new Timer(Tick, null, 0, 20000);
             // warns player when pet status is very low
-            Timer _warningtimer = new Timer(WarnMe, null, 0, 10000);
-        // Kevin and Jay 9/20----------
-        // testing the shelter list view pets and interact function
-        //Shelter myShelter = new Shelter();
+            Timer _warningtimer = new Timer(WarnMe, null, 0, 20000);
+            // Kevin and Jay 9/20----------
+            // testing the shelter list view pets and interact function
+            //Shelter myShelter = new Shelter();
 
-
-           
             Pet myPet1 = new Pet("Spot", "dog");
             Pet myPet2 = new Pet("Muffy", "dog");
             Pet myPet3 = new Pet("Charlie", "cat");
@@ -52,7 +50,7 @@ namespace VirtualPet
                 Console.WriteLine("2. Interact with one pet.");
                 Console.WriteLine("3. Interact with all pets in the shelter.");
                 Console.WriteLine("4. View Status of all pets");
-                Console.WriteLine("5. Adopt a pet.");
+                Console.WriteLine("5. Adopt a pet. (This will erase a pet from the shelter.)");
                 
                 Console.WriteLine("enter Q to quit");
 
@@ -99,8 +97,10 @@ namespace VirtualPet
         }
         public static void Tick(object o)
         {
-            foreach (Pet p in myShelter.ShelterList)
+            //foreach (Pet p in myShelter.ShelterList)
+            for (int i = 0; i < myShelter.ShelterList.Count; i++)
             {
+                Pet p = myShelter.ShelterList[i];
                 p.Tick();
      
             }
@@ -109,8 +109,10 @@ namespace VirtualPet
 
         public static void WarnMe(object o)
         {
-            foreach (Pet p in myShelter.ShelterList)
+            //foreach (Pet p in myShelter.ShelterList)
+            for(int i = 0; i < myShelter.ShelterList.Count; i++)
             {
+                Pet p = myShelter.ShelterList[i];
                 if (p.Hunger > 80 || p.Health < 20 || p.Boredom > 80)
                 {
                     if (p.isRobot == true)
