@@ -11,11 +11,7 @@ namespace VirtualPet
 {
 	public class Shelter
 	{
-		//tbd
-		//public List <Pet> PetList { get; set; }
 		public List<Pet> ShelterList = new List<Pet>();
-		//private object shelterList;
-
 		protected SoundPlayer CanOpen = new SoundPlayer(@"..\..\..\..\Sounds\can_open.wav");
 		protected SoundPlayer Squeak = new SoundPlayer(@"..\..\..\..\Sounds\squeak.wav");
 		protected SoundPlayer Beep = new SoundPlayer(@"..\..\..\..\Sounds\beep.wav");
@@ -54,8 +50,6 @@ namespace VirtualPet
             }
 			int index = Convert.ToInt32(Console.ReadLine())-1;
 			Console.Clear();
-			//Need to find compatible sound.
-			//DoorOpen.Play();
 
 			return ShelterList[index];
 		}
