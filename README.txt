@@ -77,7 +77,25 @@ BATTERY: Your robot pets' batteries get drained overtime, so you have to CHARGE 
 
 MAINTENANCE: Your pet need regular maintenance over time, so you have to take them for MAINTENANCE 
              to keep them functioning properly. To perform the TAKE FOR MAINTENANCE action,
-             navigate from the MAIN MENU to select the robopet pet and select TAKE FOR MAINTENANCE.
+             navigate from the MAIN MENU to select the robopet pet and select TAKE FOR MAINTENANCE
+	     
+
+ADD PET TO SHELTER: When you first started, the shelter already contains a few dogs that need
+	            your help.  To add to the brood, navigate FROM the MAIN MENU to select
+	            ADD NEW PET TO THE SHELTER. Just enter the name and species of your pet
+	            when asked.  (Note: RoboPets must be assigned the species ROBOT).
+
+
+ADOPT PET: When you adopt a pet, you are removing your pet from the shelter (and the game)!
+	   To adopt, navigate FROM the MAIN MENU to select ADOPT A PET.  Then just select your
+	   pet.  The resulting change to the shelter can be checked by VIEWING STATUS...
+ 
+
+VIEW STATUS: You should check in on the status of your pet(s) regularly in order
+	     to keep them happy, healthy or maintained, and fed or charged. To perform 
+	     the VIEW STATUS action, navigate FROM the MAIN MENU to select VIEW STATUS
+	     OF ALL PETS.  This will give you a quick overview of how they're doing,
+	     even for robopets! 
 
 
 ==========================
@@ -94,7 +112,7 @@ MAINTENANCE: Your pet need regular maintenance over time, so you have to take th
 ==========================
 
      Every tick
-     (2 SECONDS)
+    (20 SECONDS)
          |
          V
      Health - 5
@@ -127,22 +145,6 @@ MAINTENANCE: Your pet need regular maintenance over time, so you have to take th
     Boredom - 20
 
 ==========================
-
-ADD PET TO SHELTER: When you first started, the shelter already contains a few dogs that need
-	            your help.  To add to the brood, navigate FROM the MAIN MENU to select
-	            ADD NEW PET TO THE SHELTER. Just enter the name and species of your pet
-	            when asked.  (Note: RoboPets must be assigned the species ROBOT).
-
-ADOPT PET: When you adopt a pet, you are removing your pet from the shelter (and the game)!
-	   To adopt, navigate FROM the MAIN MENU to select ADOPT A PET.  Then just select your
-	   pet.  The resulting change to the shelter can be checked by VIEWING STATUS...
- 
-VIEW STATUS: You should check in on the status of your pet(s) regularly in order
-	     to keep them happy, healthy or maintained, and fed or charged. To perform 
-	     the VIEW STATUS action, navigate FROM the MAIN MENU to select VIEW STATUS
-	     OF ALL PETS.  This will give you a quick overview of how they're doing,
-	     even for robopets! 
-
 
 
 
