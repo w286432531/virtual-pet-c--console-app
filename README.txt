@@ -5,9 +5,9 @@ __     _____ ____ _____ _   _   _    _       ____  _____ _____
   \ V /  | ||  _ < | | | |_| / ___ \| |___  |  __/| |___  | |  
    \_/  |___|_| \_\|_|  \___/_/   \_\_____| |_|   |_____| |_|  
 =================================================================
-Virtual Toys, Inc
+Virtual Toys, Inc ©
 
-(same as .:WHAT YOU CAN DO:. i guess i dont know...TBD )
+
 ==========================
     .:DESCRIPTION:.
 ==========================
@@ -28,16 +28,6 @@ In virtual pet game you can select and perform activities such as
 * Art!
 
 * Sounds!
-
-
-
-==========================
-  .:TABLE OF CONTENTS:.
-==========================
-    .:INSTRUCTIONS:.
-.:WHAT YOU NEED TO START:.
-   .:WHAT YOU CAN DO:.
-      .:FEATURES:.
 
 
 ==========================
