@@ -15,9 +15,6 @@ namespace VirtualPet
             Timer _timer = new Timer(Tick, null, 0, 20000);
             // warns player when pet status is very low
             Timer _warningtimer = new Timer(WarnMe, null, 0, 20000);
-            // Kevin and Jay 9/20----------
-            // testing the shelter list view pets and interact function
-            //Shelter myShelter = new Shelter();
 
             Pet myPet1 = new Pet("Spot", "dog");
             Pet myPet2 = new Pet("Muffy", "dog");
@@ -61,9 +58,6 @@ namespace VirtualPet
                 {
                     
                     case "1":
-
-                        // insert check status of pet here (If there is no pet, print "go to the shelter and get a pet")
-                        // insert making your own pet here
                         CreatePet();
                         break;
 
@@ -75,13 +69,11 @@ namespace VirtualPet
                         myShelter.InteractWithAllPets();
                         break;
                     case "4":
-                        // insert checking status of ALL pets
                         myShelter.GetStatusAll();
                         break;
 
                     case "5":
 
-                        // Remove the pet in the shelter
                         myShelter.Adopt();
                         break;
 
@@ -97,7 +89,6 @@ namespace VirtualPet
         }
         public static void Tick(object o)
         {
-            //foreach (Pet p in myShelter.ShelterList)
             for (int i = 0; i < myShelter.ShelterList.Count; i++)
             {
                 Pet p = myShelter.ShelterList[i];
@@ -109,7 +100,6 @@ namespace VirtualPet
 
         public static void WarnMe(object o)
         {
-            //foreach (Pet p in myShelter.ShelterList)
             for(int i = 0; i < myShelter.ShelterList.Count; i++)
             {
                 Pet p = myShelter.ShelterList[i];
