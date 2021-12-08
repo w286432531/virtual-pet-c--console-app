@@ -28,7 +28,10 @@ namespace VirtualPet
             //Tobor.GetStatus();
             Tobor.Name = "Tobor";
             myShelter.ShelterList.Add(Tobor);
-
+            //foreach (Pet p in myShelter) 
+            //{
+            //    Console.WriteLine(p.Name);
+            //}
 
             bool playing = true;
             
@@ -95,7 +98,6 @@ namespace VirtualPet
                 p.Tick();
      
             }
-
         }
 
         public static void WarnMe(object o)

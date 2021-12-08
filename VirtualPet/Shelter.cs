@@ -5,11 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Media;
+using System.Collections;
 //need to install nuget package System.Windows.Extensions
 
 namespace VirtualPet
 {
-	public class Shelter
+	public class Shelter :IEnumerable<Pet>
 	{
 		public List<Pet> ShelterList = new List<Pet>();
 		protected SoundPlayer CanOpen = new SoundPlayer(@"..\..\..\..\Sounds\can_open.wav");
@@ -184,5 +185,15 @@ namespace VirtualPet
 		{
 			ShelterList.Remove(ChosenPet);
 		}
-	}
+
+        public IEnumerator<Pet> GetEnumerator()
+        {
+            return ShelterList.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
